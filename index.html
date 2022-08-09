@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/44e0ed08c2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!------------------------------| Font: Roboto |----------------------------->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!--------------------------| Font: IBM Plex Mono |-------------------------->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+
+    <!---------------------------| Font: Indie Flower |-------------------------->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+
+    <!-- Html2Pdf  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js" integrity="sha512vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A==" crossorigin="anonymous"></script>
+
+    <title>Orzeczenie Lekarskie - EMS</title>
+</head>
+<body>
+    <div class="papierek" id ="form-print">
+        <header>
+            <img src="img/logo1.png" alt="" id="logo1">
+            <img src="img/logo2.png" alt="" id="logo2">
+        </header>
+
+        <h1>Zaświadczenie Lekarskie o przyczynach<br>i rodzaju uszkodzeń ciała</h1>
+
+        <form enctype="text/plain" autocomplete="off">
+            <label for="name">
+                <span>1.</span> <p>Imię i nazwisko oraz data urodzenia osoby badanej</p><br>
+                <input type="text" maxlength="70">
+            </label>
+
+            <label>
+                <span>2.</span> <p>Imię i nazwisko osoby prowadzącej badanie</p><br>
+                <input type="text" maxlength="70">
+            </label>
+
+            <label>
+                <span>3.</span> <p>Data i godzina przeprowadzonego badania</p><br>
+                <input type="text" maxlength="70">
+            </label>
+
+            <label>
+                <span>4.</span> <p>Data i godzina wystawienia zaświadczenia</p><br>
+                <input type="text" maxlength="70">
+            </label>
+
+            <label>
+                <span>5.</span> <p>Opinia o stanie zdrowia osoby badanej, będącą wynikiem przeprowadzonego badania, ze szczególnym uwzględnieniem rodzaju stwierdzonych uszkodzeń ciała oraz możliwych przyczyn i czasu ich powstania.</p><br>
+                <textarea></textarea>
+            </label>
+
+            <footer>
+                <img src="img/pieczatka.png" alt="">
+
+                <label class="podpis">
+                    <input type="text" maxlength="30">
+                    <p>Imię Nazwisko</p>
+                </label> 
+            </footer>       
+        </form>
+    </div>
+
+    <i id="generate" onclick="GeneratePdf();" class="fa-solid fa-file-arrow-down"></i>
+
+    <script>          
+        function GeneratePdf() {
+            var element = document.getElementById('form-print');
+            html2pdf(element);
+        }
+    </script>
+    
+</body>
+</html>
