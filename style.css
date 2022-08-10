@@ -1,8 +1,11 @@
 body, html {
     margin: 0;
     padding: 0;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    height: 2314px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #generate {

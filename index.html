@@ -24,7 +24,7 @@
     <title>Orzeczenie Lekarskie - EMS</title>
 </head>
 <body>
-    <div class="papierek" id ="form-print">
+    <div class="papierek" id="form-print">
         <header>
             <img src="img/logo1.png" alt="" id="logo1">
             <img src="img/logo2.png" alt="" id="logo2">
@@ -80,7 +80,9 @@
     <script>          
         function GeneratePdf() {
             var element = document.getElementById('form-print');
-            html2pdf(element);
+            var opt = { filename: 'OrzeczenieLekarskie-EMS.pdf', };
+
+            html2pdf(element, opt);
         }
     </script>
     
