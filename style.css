@@ -58,6 +58,7 @@ form > label {
     font-size: 17px;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 form > label > span {
@@ -90,22 +91,30 @@ textarea {
     border-bottom: 2px dotted black;
     background-color: rgba(0, 0, 0, 0);
     width: 85%;
-    min-height: 290px;
-    max-height: 290px;
+    height: 239px;
+    resize: none;
     margin-left: 40px;
     margin-top: -17px;
     font-family: 'Shadows Into Light Two', cursive;
-    font-size: 21px;
-    line-height: 26px;
+    font-size: 23px;
     color: rgb(36, 102, 189);
     overflow: hidden;
+}
+
+form > label > div {
+    position: absolute;
+    width: 85%;
+    margin-left: 40px;
+    border-bottom: 2px dotted black;
+    margin-top: 0;
+    top: 144px;
 }
 
 form > footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 170px;
+    height: 211px;
 }
 
 .podpis {
