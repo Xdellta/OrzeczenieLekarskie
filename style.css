@@ -91,7 +91,7 @@ textarea {
     border-bottom: 2px dotted black;
     background-color: rgba(0, 0, 0, 0);
     width: 85%;
-    height: 239px;
+    height: 271px;
     resize: none;
     margin-left: 40px;
     margin-top: -17px;
@@ -106,7 +106,7 @@ form > label > div {
     width: 85%;
     margin-left: 40px;
     border-bottom: 2px dotted black;
-    margin-top: 0;
+    margin-top: -2px;
     top: 144px;
 }
 
@@ -114,7 +114,7 @@ form > footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 211px;
+    height: 179px;
 }
 
 .podpis {
